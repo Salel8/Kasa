@@ -1,7 +1,7 @@
 import Banner from '../components/Accueil/banner.jsx'
 import Card from '../components/Accueil/card.jsx'
 
-function Accueil() {
+function Home() {
   return (
     <div>
       <Banner />
@@ -10,4 +10,4 @@ function Accueil() {
   );
 }
 
-export default Accueil;
+export default Home;

@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom';
+import { Route, Routes} from 'react-router';
 
 import './styles/index.css';
 import Home from './pages/Home.jsx';
-import A_propos from './pages/A_Propos.jsx';
+import A_Propos from './pages/A_Propos.jsx';
 import Logement from './pages/Logement.jsx';
 import Header from './components/Header';
+import Footer from './components/footer';
+import Error from './pages/Erreur.jsx';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -14,21 +17,20 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <Header />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/A_Propos">
-          <A_propos />
-        </Route>
-        <Route path="/Logement">
-          <Logement />
-        </Route>
-        <Route>
-          <Error />
-        </Route>
-      </Switch>
+    <Header />
+      <Routes>
+      <Route exact path="/" element={<Home />}/>
+          
+        <Route path="/A_Propos" element={<A_Propos />}/>
+          
+        
+        <Route path="/Logement/:id" element={<Logement />}/>
+          
+        
+        <Route path="/Erreur" element={<Error />}/>
+          
+        
+      </Routes>
       <Footer />
     </Router>
   </React.StrictMode>
