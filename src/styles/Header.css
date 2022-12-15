@@ -1,6 +1,28 @@
-.conteneur{
+.conteneur_header{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /*width: 100%;*/
+}
+
+nav{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+nav :visited{
+    color: red;
+}
+
+.menu{
+    padding-left: 50%;
 }

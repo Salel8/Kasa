@@ -1,15 +1,16 @@
 import { useState } from 'react';
+import '../../styles/collapse.css'
 
 function Collapse() {
     const [isOpen, setIsOpen] = useState(false)
 
     return isOpen ? (
         <div>
-            <div>
+            <div className='conteneur_collapse_titre'>
                 <p>Flexibilité</p>
                 <button onClick={() => setIsOpen(false)}>Fermer</button>
             </div>
-            <div>
+            <div className='conteneur_collapse_texte'>
                 <p>Les annonces postées sur Kasa garantissent une fiabilité totale. 
                    Les photos sont conformes aux logements, et toutes les informations
                    sont régulièrement vérifiées par nos équipes.
@@ -19,7 +20,7 @@ function Collapse() {
         </div>
     ) : (
         <div>
-            <div>
+            <div className='conteneur_collapse_titre'>
                 <p>Flexibilité</p>
                 <button onClick={() => setIsOpen(true)}>Ouvert</button>
             </div>

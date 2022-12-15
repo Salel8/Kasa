@@ -1,0 +1,23 @@
+.conteneur_collapse_titre{
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #FF6060;
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.conteneur_collapse_texte{
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #F6F6F6;
+    color: #FF6060;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+
+}

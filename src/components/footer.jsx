@@ -3,12 +3,12 @@ import '../styles/Footer.css'
  
 function Footer() {
     return (
-        <div className='conteneur'>
+        <div className='conteneur_footer'>
             <div>
                 <img src={logo} alt='Logo Kasa' />
             </div>
             <div>
-                <p>2020 Kasa. All rights reserved</p>
+                <p>© 2020 Kasa. All rights reserved</p>
             </div>
         </div>
         

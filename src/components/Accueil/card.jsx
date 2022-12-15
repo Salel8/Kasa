@@ -1,4 +1,5 @@
 import {useEffect, useState} from "react";
+import '../../styles/card.css'
 
 
 //const pieces = await fetch("pieces-autos.json").then(pieces => pieces.json());
@@ -45,12 +46,12 @@ function Card() {
      //console.log({id});
  
      return (
-     <div>
+     <div className="conteneur_ensemble_card">
         {logements.map(logement => (
-         <div key={logement.id}>
-            <a href={'/Logement/'+logement.id} >
-            <img className="img" src={logement.cover} alt="Photo d'un logement" />
-            <p>{logement.title}</p>
+         <div key={logement.id} className="conteneur_card">
+            <a href={'/Logement/'+logement.id} className='lien_card'>
+            <img className="image_card" src={logement.cover} alt="Photo d'un logement" />
+            <p className="texte_card">{logement.title}</p>
             </a>
         </div>
         ))}

@@ -1,0 +1,19 @@
+.conteneur_banner{
+    padding-left: 8%;
+    padding-right: 8%;
+    position: relative;
+    /*width: 100%;*/
+    
+}
+
+.lmj-title{
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    width: 60%;
+}
+
+.image_banner{
+    width: 100%;
+    border-radius: 10px;
+}
