@@ -1,10 +1,10 @@
 import banner from '../../assets/Banner_a_propos.png'
-//import '../../styles/Banner.css'
+import '../../styles/banner.css'
 
 function Banner() {
     return (
-        <div>
-            <img src={banner} alt='Bannière paysage montagneux' />
+        <div className='conteneur_banner'>
+            <img src={banner} alt='Bannière paysage montagneux' className='image_banner'/>
         </div>
     )
 }

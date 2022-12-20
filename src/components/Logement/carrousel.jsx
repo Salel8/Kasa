@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
+import '../../styles/carrousel.css'
 
 function Carrousel() {
     const [logements, setLogements] =  useState([]);
@@ -34,25 +35,26 @@ function Carrousel() {
     //console.log(tab1);
     const logements_pictures = logements.map(logements => logements.pictures);
     let tableau_image1 = logements_pictures[numero_tableau_logements];
-    //let tableau_image2 = tableau_image1.forEach(element => element);
-    //let tableau_image2 = tableau_image1;
+    
+    const logements_pictures_length = logements.map(logements => logements.pictures.length);
+    let longueur_tableau_image1 = logements_pictures_length[numero_tableau_logements];
 
     console.log(logements_pictures);
-    console.log(tableau_image1);
+    console.log(longueur_tableau_image1);
 
     const logements_pictures_carrousel = logements.map(logements => logements.pictures[indexPictures]);
     let tableau_image_carrousel = logements_pictures_carrousel[numero_tableau_logements];
-    console.log(tableau_image_carrousel);
+    //console.log(tableau_image_carrousel);
 
 
 
-    const tableau_image = [
+    /*const tableau_image = [
         "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
         "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg",
         "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg",
         "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
         "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg"
-    ];
+    ];*/
     const boutton_precedant = "<";
     const boutton_suivant = ">";
     /*<button onClick={() => setIndexPictures(indexPictures < 0 ? parseInt(tableau_image.length) - 1 : parseInt(indexPictures) - 1)}>{boutton_precedant}</button>
@@ -60,10 +62,12 @@ function Carrousel() {
     <button onClick={() => setIndexPictures(indexPictures > parseInt(tableau_image.length) - 1 ? 0 : parseInt(indexPictures) + 1)}>{boutton_suivant}</button>*/
 
     return (
-        <div>
-            <button onClick={() => setIndexPictures(indexPictures < 0 ? parseInt(tableau_image1.length) - 1 : parseInt(indexPictures) - 1)}>{boutton_precedant}</button>
-            <img src={tableau_image_carrousel} alt="Carrousel d'image" />
-            <button onClick={() => setIndexPictures(indexPictures > parseInt(tableau_image1.length) - 1 ? 0 : parseInt(indexPictures) + 1)}>{boutton_suivant}</button>
+        <div className="margin_page">
+            <button onClick={() => setIndexPictures(indexPictures == 0 ? parseInt(tableau_image1.length) - 1 : parseInt(indexPictures) - 1)} className="boutton_carrousel precedant">{boutton_precedant}</button>
+            <img src={tableau_image_carrousel} alt="Carrousel d'image" className="image_carrousel"/>
+            <button onClick={() => setIndexPictures(indexPictures == parseInt(tableau_image1.length) - 1 ? 0 : parseInt(indexPictures) + 1)} className="boutton_carrousel suivant">{boutton_suivant}</button>
+            <p className="index_image">{parseInt(indexPictures) + 1}/{longueur_tableau_image1}</p>
+
         </div>
     )
 }

@@ -1,0 +1,37 @@
+.image_carrousel{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+    /*margin-left: 10%;*/
+}
+
+.boutton_carrousel{
+    background-color: inherit;
+    color: white;
+    position: absolute;
+    top: 50%;
+    font-size: 500%;
+}
+
+.precedant{
+    left: 10%;
+}
+
+.suivant{
+    right: 10%;
+}
+
+.index_image{
+    position: relative;
+    left: 50%;
+    margin-top: -3%;
+    margin-bottom: 3%;
+    color: white;
+    width: 10%;
+}
+
+.margin_page{
+    margin-left: 8%;
+    margin-right: 8%;
+}

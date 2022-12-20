@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useState, createContext } from 'react';
 import '../../styles/collapse.css'
 import chapeau_haut from '../../assets/Chapeau_haut.png'
 import chapeau_bas from '../../assets/Chapeau_bas.png'
+
+const ThemeContext = createContext()
 
 
 /*const descriptifCollapse = {
@@ -18,7 +20,7 @@ import chapeau_bas from '../../assets/Chapeau_bas.png'
 function Collapse({collapseValue, collapseType}) {
     const [isOpen, setIsOpen] = useState(false)
 
-    return isOpen ? (
+    return isOpen ? ( <ThemeContext.Provider value={{ collapseValue, collapseType }}>
         <div>
             <div className='conteneur_collapse_titre'>
                 <p>{collapseType}</p>
@@ -29,13 +31,15 @@ function Collapse({collapseValue, collapseType}) {
             </div>
             
         </div>
-    ) : (
+        </ThemeContext.Provider>
+    ) : ( <ThemeContext.Provider value={{ collapseValue, collapseType }}>
         <div>
             <div className='conteneur_collapse_titre'>
                 <p>{collapseType}</p>
                 <button onClick={() => setIsOpen(true)}><img src={chapeau_bas} alt='Symbole chapeau pointant vers le bas' /></button>
             </div>
         </div>
+        </ThemeContext.Provider>
     )
 }
 

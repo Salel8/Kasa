@@ -1,0 +1,23 @@
+.conteneur_erreur{
+    color: #FF6060;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteneur_erreur h1{
+    font-size: 1000%;
+    margin-bottom: 2%;
+}
+
+.conteneur_erreur p{
+    margin-bottom: 15%;
+}
+
+.conteneur_erreur a{
+    padding-bottom: 8%;
+}
+
+.conteneur_erreur a:visited{
+    color: #FF6060;
+}

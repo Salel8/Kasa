@@ -20,9 +20,15 @@ nav{
 }
 
 nav :visited{
-    color: red;
+    color: #FF6060;
 }
 
-.menu{
-    padding-left: 50%;
+nav a[href="/"]{
+    /*margin-right: 10%;*/
+    position: relative;
+    right: 25%;
 }
+
+/*.menu{
+    padding-left: 50%;
+}*/
