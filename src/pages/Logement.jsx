@@ -1,14 +1,14 @@
-import {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+/*import {useEffect, useState} from "react";
+import {useParams} from "react-router-dom";*/
 import Carrousel from '../components/Logement/carrousel.jsx'
 import Information from '../components/Logement/information.jsx'
-import Collapse from '../components/A_Propos/collapse.jsx'
+/*import Collapse from '../components/A_Propos/collapse.jsx'*/
 
 
 
 
 function Logement(){
-    const [logements, setLogements] =  useState([]);
+    /*const [logements, setLogements] =  useState([]);
 
     const [indexPictures, setIndexPictures] =  useState([0]);
     //<img src={logements.pictures[indexPictures]} alt="Carrousel d'image" />
@@ -34,19 +34,20 @@ function Logement(){
     const logements_equipement = logements.map(logements => logements.equipments);
     let equipement_du_logement = logements_equipement[numero_tableau_logements];
 
-const descriptifCollapse = {
-    description: description_du_logement,
-    equipement: equipement_du_logement,
-}
+    const descriptifCollapse = {
+        description: description_du_logement,
+        equipement: equipement_du_logement,
+    }*/
+
+    /*<div>
+            <Collapse collapseType="Description" collapseValue={descriptifCollapse.description}/>
+            <Collapse collapseType="Équipements" collapseValue={descriptifCollapse.equipement}/>
+    </div>*/
 
     return (
         <div className="margin_page_logement">
             <Carrousel />
             <Information />
-            <div>
-            <Collapse collapseType="Description" collapseValue={descriptifCollapse.description}/>
-            <Collapse collapseType="Équipements" collapseValue={descriptifCollapse.equipement}/>
-            </div>
         </div>
     )
 

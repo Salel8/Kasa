@@ -24,11 +24,12 @@ nav :visited{
 }
 
 nav a[href="/"]{
-    /*margin-right: 10%;*/
     position: relative;
     right: 25%;
 }
 
-/*.menu{
-    padding-left: 50%;
-}*/
+@media all and (max-width: 767px) {
+    img{
+        width: 70%;
+    }
+}

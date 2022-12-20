@@ -21,7 +21,7 @@ function Collapse({collapseValue, collapseType}) {
     const [isOpen, setIsOpen] = useState(false)
 
     return isOpen ? ( <ThemeContext.Provider value={{ collapseValue, collapseType }}>
-        <div>
+        <div className='conteneur_ensemble_titre_texte'>
             <div className='conteneur_collapse_titre'>
                 <p>{collapseType}</p>
                 <button onClick={() => setIsOpen(false)}><img src={chapeau_haut} alt='Symbole chapeau pointant vers le haut' /></button>
@@ -33,7 +33,7 @@ function Collapse({collapseValue, collapseType}) {
         </div>
         </ThemeContext.Provider>
     ) : ( <ThemeContext.Provider value={{ collapseValue, collapseType }}>
-        <div>
+        <div className='conteneur_ensemble_titre_texte'>
             <div className='conteneur_collapse_titre'>
                 <p>{collapseType}</p>
                 <button onClick={() => setIsOpen(true)}><img src={chapeau_bas} alt='Symbole chapeau pointant vers le bas' /></button>

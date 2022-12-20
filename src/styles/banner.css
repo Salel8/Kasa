@@ -8,12 +8,32 @@
 
 .lmj-title{
     position: absolute;
-    top: 40%;
-    left: 25%;
+    top: 35%;
+    left: 30%;
     width: 60%;
+    color: white;
 }
 
 .image_banner{
     width: 100%;
     border-radius: 10px;
+    object-fit: cover;
+}
+
+@media all and (max-width: 767px) {
+    .conteneur_banner{
+        height: 200px;
+    }
+
+    .image_banner{
+        height: 100%;
+    }
+
+    .lmj-title{
+        top: 20%;
+        left: 18%;
+        width: 73%;
+        
+    }
+    
 }

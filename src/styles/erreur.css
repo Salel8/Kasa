@@ -21,3 +21,15 @@
 .conteneur_erreur a:visited{
     color: #FF6060;
 }
+
+@media all and (max-width: 767px) {
+    .conteneur_erreur p{
+        width: 47%;
+        margin-bottom: 25%;
+    }
+
+    .conteneur_erreur h1{
+        font-size: 700%;
+        margin-bottom: 0%;
+    }
+}

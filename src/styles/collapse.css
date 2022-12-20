@@ -31,8 +31,31 @@
     z-index: 1;
 }
 
+.conteneur_collapse_texte div{
+    margin-bottom: 2%;
+    margin-top: 3%;
+}
+
+/*.conteneur_collapse_texte:last-child{
+    margin-bottom: 5%;
+}*/
+
 button{
     color: white;
     background-color: #FF6060;
     border: none;
+}
+
+@media all and (max-width: 767px) {
+    .conteneur_collapse_titre{
+        margin-left: 8%;
+        margin-right: 8%;
+        margin-top: 4%;
+    }
+
+    .conteneur_collapse_texte div{
+        margin-bottom: 15%;
+        margin-top: 5%;
+    }
+    
 }

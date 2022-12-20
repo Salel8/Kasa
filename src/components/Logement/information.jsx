@@ -3,6 +3,8 @@ import {useParams} from "react-router-dom";
 import '../../styles/information.css'
 import etoile_rouge from '../../assets/Etoile_rouge.png'
 import etoile_grise from '../../assets/Etoile_grise.png'
+import Collapse from '../../components/A_Propos/collapse.jsx'
+
 
 
 
@@ -78,8 +80,22 @@ function Information() {
             //console.log(tags)
         }
     }
+
+
+    const logements_description = logements.map(logements => logements.description);
+    let description_du_logement = logements_description[numero_tableau_logements];
+
+    const logements_equipement = logements.map(logements => logements.equipments);
+    let equipement_du_logement = logements_equipement[numero_tableau_logements];
+
     
+
+    const descriptifCollapse = {
+        description: description_du_logement,
+        equipement: equipement_du_logement ,
+    }
     
+    console.log(equipement_du_logement);
 
     /*let boucle_tag = for (let i = 0; i < tag_logement.length; i++) {
         // Ceci sera exécuté 5 fois
@@ -90,7 +106,23 @@ function Information() {
     
       //{logements_tag[numero_tableau_logements]}
 
-    
+      /*let baba = <ul>for (e=0, e=equipement_du_logement, e++){<li>a</li>}</ul> 
+
+      let babab = <ul>{logements.map((plant, index) => (
+        <li key={`${plant}-${index}`}>{ plant }</li>
+    ))}</ul>*/
+
+    /*let aaaa = <ul>{logements.map((logements, index) => (
+        <li key={`${logements}-${index}`}>{ logements.equipments }</li>
+    ))}</ul>;*/
+
+    /*let aaaa = <ul>{equipement_du_logement.forEach((logements, index) => (
+        <li key={`${logements}-${index}`}>{ logements }</li>
+    ))}</ul>;*/
+
+    /*let aaa = <ul><li>{equipement_du_logement[0]}</li><li>{equipement_du_logement[1]}</li></ul>;
+
+    console.log(aaa);*/
 
     return (
         <div className="conteneur_ensemble">
@@ -110,9 +142,13 @@ function Information() {
                 <div className="conteneur_tags">
                     {tags}
                 </div>
-                <div>
+                <div className="conteneur_image_etoile">
                     {stars}
                 </div>
+            </div>
+            <div className="container_collapse_logement">
+                <Collapse collapseType="Description" collapseValue={descriptifCollapse.description} className="conteneur_titre_texte"/>
+                <Collapse collapseType="Équipements" collapseValue={descriptifCollapse.equipement} className="conteneur_titre_texte"/>
             </div>
         </div>
     )

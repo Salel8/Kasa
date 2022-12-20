@@ -35,3 +35,12 @@
     margin-left: 8%;
     margin-right: 8%;
 }
+
+@media all and (max-width: 767px) {
+    .image_carrousel{
+        height: 300px;
+    }
+    .boutton_carrousel{
+        top: 25%;
+    }
+}

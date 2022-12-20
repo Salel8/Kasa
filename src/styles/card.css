@@ -39,3 +39,15 @@
     bottom: 3%;
     left: 5%;
 }
+
+@media all and (max-width: 767px) {
+    .conteneur_card{
+        width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .conteneur_ensemble_card{
+        background-color: white;
+    }
+}
