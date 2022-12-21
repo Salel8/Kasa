@@ -1,5 +1,7 @@
 import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 import '../../styles/information.css'
 import etoile_rouge from '../../assets/Etoile_rouge.png'
 import etoile_grise from '../../assets/Etoile_grise.png'
@@ -33,6 +35,12 @@ function Information() {
     console.log(logements_id);
     let numero_tableau_logements = logements_id.findIndex((dislike) => dislike==id);
     console.log(logements_id.findIndex((dislike) => dislike==id));
+
+    const navigate = useNavigate();
+    if (numero_tableau_logements==undefined || numero_tableau_logements==-1){
+        navigate("/erreur");
+    }
+    
     //console.log(logements[0].pictures);
     let tab = logements[numero_tableau_logements];
     console.log(tab);
@@ -123,6 +131,8 @@ function Information() {
     /*let aaa = <ul><li>{equipement_du_logement[0]}</li><li>{equipement_du_logement[1]}</li></ul>;
 
     console.log(aaa);*/
+
+    //console.log(logements_id.findIndex((dislike) => dislike==id));
 
     return (
         <div className="conteneur_ensemble">
