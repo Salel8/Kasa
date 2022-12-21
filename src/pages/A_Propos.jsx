@@ -1,5 +1,6 @@
 import Banner from '../components/A_Propos/banner.jsx'
 import Collapse from '../components/A_Propos/collapse.jsx'
+import '../styles/font.css'
 
 const descriptifCollapse = {
     fiabilité: "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.",

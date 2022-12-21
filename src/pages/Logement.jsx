@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";*/
 import Carrousel from '../components/Logement/carrousel.jsx'
 import Information from '../components/Logement/information.jsx'
 /*import Collapse from '../components/A_Propos/collapse.jsx'*/
+import '../styles/font.css'
 
 
 
