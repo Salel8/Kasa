@@ -124,15 +124,52 @@ function Information() {
         <li key={`${logements}-${index}`}>{ logements.equipments }</li>
     ))}</ul>;*/
 
-    /*let aaaa = <ul>{equipement_du_logement.forEach((logements, index) => (
-        <li key={`${logements}-${index}`}>{ logements }</li>
+    /*let ccc= {
+        mmm : []
+    }*/
+    const logements_aaaa = logements.map(logements => logements.equipments);
+    let aaaa_logement = logements_aaaa[numero_tableau_logements];
+
+    let tableau = [];
+    
+    //ccc.mmm = ccc.mmm.push(aaaa_logement);
+        //let bbb=logements[0];
+        //let bbbb= bbb.equipments;
+        console.log(typeof aaaa_logement);
+        console.log(logements_aaaa);
+        
+    /*let aaaa = <ul>{[logements.equipments].map((logementss, index) => (
+        <li key={`${logements}-${index}`}>{ [logementss] }</li>
     ))}</ul>;*/
+    /*let aaaa = <ul>{ccc.mmm.map((logementss, indexx) => (
+        <li key={`${logementss}-${indexx}`}>{ logementss }</li>
+    ))}</ul>;*/
+    //let aaaa = "bonjour"
+    let aaaaa = [aaaa_logement].flat();
+    aaaaa.splice(6,1)
+    console.log(aaaaa);
+    
+    
+    //aaaaa.push(aaaa_logement);
+    
+    let aaaa = <ul>{aaaaa.map((logements, index) => (
+        <li key={`${logements}-${index}`}>{ logements }</li>
+    ))}</ul>;
+    
 
     /*let aaa = <ul><li>{equipement_du_logement[0]}</li><li>{equipement_du_logement[1]}</li></ul>;
 
     console.log(aaa);*/
 
     //console.log(logements_id.findIndex((dislike) => dislike==id));
+
+    /*let aaaa = logements.map(logements => {
+        let logements_aaaa = logements.equipments;
+        let aaaa_logement = logements_aaaa[numero_tableau_logements];
+        return  <ul>{aaaa_logement.map((logementss, index) => (
+            <li key={`${logementss}-${index}`}>{ logementss }</li>
+        ))}</ul>;
+    })*/
 
     return (
         <div className="conteneur_ensemble">
@@ -157,8 +194,8 @@ function Information() {
                 </div>
             </div>
             <div className="container_collapse_logement">
-                <Collapse collapseType="Description" collapseValue={descriptifCollapse.description} className="conteneur_titre_texte"/>
-                <Collapse collapseType="Équipements" collapseValue={descriptifCollapse.equipement} className="conteneur_titre_texte"/>
+                <Collapse collapseType="Description" collapseValue={description_du_logement} className="conteneur_titre_texte"/>
+                <Collapse collapseType="Équipements" collapseValue={aaaa} className="conteneur_titre_texte"/>
             </div>
         </div>
     )
