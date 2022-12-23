@@ -80,9 +80,9 @@
     justify-content: space-between;
 }
 
-.conteneur_ensemble_titre_texte{
+/*.conteneur_ensemble_titre_texte{
     width: 45%;
-}
+}*/
 
 .conteneur_titre_texte{
     width:50%;
@@ -106,21 +106,6 @@
     margin-right: 0%;
 }
 
-/*.container_collapse_logement:last-child{
-    width: 50%;
-}*/
-
-/*.conteneur_ensemble_titre_texte{
-    width: 50%;
-}*/
-
-/*.container_collapse_logement{
-    width: 50%;
-}
-
-.conteneur_collapse_titre{
-    
-}*/
 
 @media all and (max-width: 767px) {
     .conteneur_image_etoile img{

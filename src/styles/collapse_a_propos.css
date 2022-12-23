@@ -13,6 +13,7 @@
     border-radius: 7px;
     z-index: 10;
     position: relative;
+    width: 60%;
 }
 
 .conteneur_collapse_texte{
@@ -42,17 +43,51 @@ button{
     background-color: #FF6060;
     border: none;
 }
+.conteneur_collapse_texte{
+    width:62%;
+}
+
+.ensemble_conteneur_collapse{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 @media all and (max-width: 767px) {
     .conteneur_collapse_titre{
         margin-left: 8%;
         margin-right: 8%;
         margin-top: 4%;
+        width: 80%;
+    }
+    .conteneur_collapse_texte{
+        width: 82%;
     }
 
     .conteneur_collapse_texte div{
         margin-bottom: 15%;
         margin-top: 5%;
     }
+
+    .ensemble_conteneur_collapse{
+        width:90%;
+        margin-left:5%;
+    }
+    
     
 }
+
+.conteneur_ensemble_titre_texte{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+
+
+.conteneur_titre_texte2{
+    width:60%;
+}
+

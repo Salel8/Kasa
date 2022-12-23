@@ -1,6 +1,7 @@
 import Banner from '../components/A_Propos/banner.jsx'
 import Collapse from '../components/A_Propos/collapse.jsx'
 import '../styles/font.css'
+import '../styles/collapse_a_propos.css'
 
 const descriptifCollapse = {
     fiabilité: "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.",
@@ -13,10 +14,12 @@ function A_Propos() {
   return (
     <div>
       <Banner />
-      <Collapse collapseType="Fiabilité" collapseValue={descriptifCollapse.fiabilité}/>
-      <Collapse collapseType="Respect" collapseValue={descriptifCollapse.respect}/>
-      <Collapse collapseType="Service" collapseValue={descriptifCollapse.service}/>
-      <Collapse collapseType="Sécurité" collapseValue={descriptifCollapse.sécurité}/>
+      <div className='ensemble_conteneur_collapse'>
+      <Collapse collapseType="Fiabilité" collapseValue={descriptifCollapse.fiabilité }/>
+      <Collapse collapseType="Respect" collapseValue={descriptifCollapse.respect }/>
+      <Collapse collapseType="Service" collapseValue={descriptifCollapse.service }/>
+      <Collapse collapseType="Sécurité" collapseValue={descriptifCollapse.sécurité }/>
+      </div>
     </div>
   );
 }

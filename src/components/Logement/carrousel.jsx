@@ -6,7 +6,6 @@ function Carrousel() {
     const [logements, setLogements] =  useState([]);
 
     const [indexPictures, setIndexPictures] =  useState([0]);
-    //<img src={logements.pictures[indexPictures]} alt="Carrousel d'image" />
  
     useEffect(() => {
  
@@ -31,7 +30,6 @@ function Carrousel() {
     let tab = logements[numero_tableau_logements];
     console.log(tab);
     console.log(typeof tab);
-    //async function tab1() { return console.log(logements[0].pictures)};
     //console.log(tab1);
     const logements_pictures = logements.map(logements => logements.pictures);
     let tableau_image1 = logements_pictures[numero_tableau_logements];
@@ -48,18 +46,8 @@ function Carrousel() {
 
 
 
-    /*const tableau_image = [
-        "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
-        "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg",
-        "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg",
-        "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
-        "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg"
-    ];*/
     const boutton_precedant = "<";
     const boutton_suivant = ">";
-    /*<button onClick={() => setIndexPictures(indexPictures < 0 ? parseInt(tableau_image.length) - 1 : parseInt(indexPictures) - 1)}>{boutton_precedant}</button>
-    <img src={tableau_image[indexPictures]} alt="Carrousel d'image" />
-    <button onClick={() => setIndexPictures(indexPictures > parseInt(tableau_image.length) - 1 ? 0 : parseInt(indexPictures) + 1)}>{boutton_suivant}</button>*/
 
     return (
         <div className="margin_page">

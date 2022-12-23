@@ -3,6 +3,8 @@ import {useParams} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 import '../../styles/information.css'
+import '../../styles/collapse_information.css'
+
 import etoile_rouge from '../../assets/Etoile_rouge.png'
 import etoile_grise from '../../assets/Etoile_grise.png'
 import Collapse from '../../components/A_Propos/collapse.jsx'
@@ -13,8 +15,6 @@ import Collapse from '../../components/A_Propos/collapse.jsx'
 function Information() {
     const [logements, setLogements] =  useState([]);
 
-    const [indexPictures, setIndexPictures] =  useState([0]);
-    //<img src={logements.pictures[indexPictures]} alt="Carrousel d'image" />
  
     useEffect(() => {
  
@@ -25,11 +25,6 @@ function Information() {
     }, [])
 
     let { id } = useParams();  //on récupère l'id de l'url
-    //console.log(id);
-
-    //console.log(logements[0]);
-    //console.log(logements[0].id.includes("c67ab8a7"));
-    //console.log(logements[0].id);
 
     const logements_id = logements.map(logements => logements.id);
     console.log(logements_id);
@@ -41,12 +36,10 @@ function Information() {
         navigate("/erreur");
     }
     
-    //console.log(logements[0].pictures);
     let tab = logements[numero_tableau_logements];
     console.log(tab);
     console.log(typeof tab);
-    //async function tab1() { return console.log(logements[0].pictures)};
-    //console.log(tab1);
+    
     const logements_title = logements.map(logements => logements.title);
     let titre_du_logement = logements_title[numero_tableau_logements];
 
@@ -64,10 +57,7 @@ function Information() {
     //console.log(logements_photo);
 
     const logements_tags = logements.map(logements => logements.tags.length);
-    //let tag_logement = logements_tags[numero_tableau_logements];
-    //console.log(logements_tags[numero_tableau_logements]);
-    //console.log(tag_logement)
-    //const number_tags = logements_tags[numero_tableau_logements].length;
+    
 
     let tags = [];
     for (let i = 0; i<logements_tags[numero_tableau_logements]; i++){
@@ -105,71 +95,27 @@ function Information() {
     
     console.log(equipement_du_logement);
 
-    /*let boucle_tag = for (let i = 0; i < tag_logement.length; i++) {
-        // Ceci sera exécuté 5 fois
-        // À chaque éxécution, la variable "pas" augmentera de 1
-        // Lorsque'elle sera arrivée à 5, le boucle se terminera.
-        console.log('Faire ' + pas + ' pas vers l\'est');
-      }*/
     
-      //{logements_tag[numero_tableau_logements]}
-
-      /*let baba = <ul>for (e=0, e=equipement_du_logement, e++){<li>a</li>}</ul> 
-
-      let babab = <ul>{logements.map((plant, index) => (
-        <li key={`${plant}-${index}`}>{ plant }</li>
-    ))}</ul>*/
-
-    /*let aaaa = <ul>{logements.map((logements, index) => (
-        <li key={`${logements}-${index}`}>{ logements.equipments }</li>
-    ))}</ul>;*/
-
-    /*let ccc= {
-        mmm : []
-    }*/
     const logements_aaaa = logements.map(logements => logements.equipments);
     let aaaa_logement = logements_aaaa[numero_tableau_logements];
 
     let tableau = [];
     
-    //ccc.mmm = ccc.mmm.push(aaaa_logement);
-        //let bbb=logements[0];
-        //let bbbb= bbb.equipments;
-        console.log(typeof aaaa_logement);
-        console.log(logements_aaaa);
+    
+    console.log(typeof aaaa_logement);
+    console.log(logements_aaaa);
         
-    /*let aaaa = <ul>{[logements.equipments].map((logementss, index) => (
-        <li key={`${logements}-${index}`}>{ [logementss] }</li>
-    ))}</ul>;*/
-    /*let aaaa = <ul>{ccc.mmm.map((logementss, indexx) => (
-        <li key={`${logementss}-${indexx}`}>{ logementss }</li>
-    ))}</ul>;*/
-    //let aaaa = "bonjour"
+    
     let aaaaa = [aaaa_logement].flat();
     aaaaa.splice(6,1)
     console.log(aaaaa);
     
     
-    //aaaaa.push(aaaa_logement);
     
     let aaaa = <ul>{aaaaa.map((logements, index) => (
         <li key={`${logements}-${index}`}>{ logements }</li>
     ))}</ul>;
     
-
-    /*let aaa = <ul><li>{equipement_du_logement[0]}</li><li>{equipement_du_logement[1]}</li></ul>;
-
-    console.log(aaa);*/
-
-    //console.log(logements_id.findIndex((dislike) => dislike==id));
-
-    /*let aaaa = logements.map(logements => {
-        let logements_aaaa = logements.equipments;
-        let aaaa_logement = logements_aaaa[numero_tableau_logements];
-        return  <ul>{aaaa_logement.map((logementss, index) => (
-            <li key={`${logementss}-${index}`}>{ logementss }</li>
-        ))}</ul>;
-    })*/
 
     return (
         <div className="conteneur_ensemble">

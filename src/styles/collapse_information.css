@@ -43,6 +43,23 @@ button{
     border: none;
 }
 
+.conteneur_collapse_titre{
+    width:100%;
+    
+}
+
+.conteneur_collapse_texte{
+    width:100%;
+}
+
+.conteneur_ensemble_titre_texte{
+    width: 45%;
+}
+
+ul{
+    list-style-type: none;
+}
+
 @media all and (max-width: 767px) {
     .conteneur_collapse_titre{
         margin-left: 8%;
@@ -53,6 +70,10 @@ button{
     .conteneur_collapse_texte div{
         margin-bottom: 15%;
         margin-top: 5%;
+    }
+
+    .conteneur_ensemble_titre_texte{
+        width: 100%;
     }
     
 }
